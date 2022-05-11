@@ -66,7 +66,7 @@
         <div class="container flex flex-wrap justify-between items-center mx-auto">
             <a href="adminpanel.html" class="flex items-center">
                 <img src="https://www.hbut.edu.cn/images/logo.png" class="mr-3 h-6 sm:h-9" alt="logo">
-                <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">HBUT-SIMS</span>
+                <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">HBUT</span>
             </a>
 
             <div class="hidden w-full md:block md:w-auto" id="mobile-menu">
@@ -108,17 +108,10 @@
             <h1 class="text-3xl pl-3">
                 <i class="fa-solid fa-users mr-1"></i>Manage Students
             </h1>
-        </div>
-        <div class="m-5 text-center">
-            <h1 class=" font-bold text-5xl bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-violet-500">
-                Student Information Management System</h1>
-        </div>
-
-        <b>
-            <p
-                style="color: #2563EB;text-align: center;font-size: 30px;font-family: 'Times New Roman', Times, serif;margin-top: 5px;margin-bottom:2px;">
-                Student's Data</p>
-        </b>
+            <p style="color: #2563EB; text-align: center; font-size: 30px;font-family: 'Times New Roman', Times, serif;margin-top: 5px;margin-bottom:2px;">
+                Student's Data
+            </p>
+        
         <?php
         $DB_Connect= mysqli_connect("localhost","root","","addstudent");
        
@@ -140,10 +133,8 @@
             border-collapse:none;padding: 8px; background-color: #2563EB;">Gender</th>';
             echo '<th style="text-align:center; color:white;
             border: 2px solid #2563EB;
-            border-collapse:none;padding: 8px; background-color: #2563EB; ">Birthday</th>';
-            echo '<th style="text-align:center; color: white;
-            border: 2px solid #2563EB;
-            border-collapse:none;padding: 8px; background-color: #2563EB;">Age</th>';
+            border-collapse:none;padding: 8px; background-color: #2563EB;">Major</th>';
+           
             echo '<th style="text-align:center; color:white;
             border: 2px solid #2563EB;
             border-collapse:none;padding: 8px; background-color: #2563EB;">E-Mail</th>';
@@ -167,10 +158,8 @@
             border-collapse:collapse;padding: 8px;background-color:#ffffff;color:black;">'.$row['Gender']."</td>";
             echo'<td style="text-align:center;
             border: 2px solid #000000;
-            border-collapse:collapse;padding: 8px;background-color:#fdfdfd;color:black;">'.$row['Birthday']."</td>";
-            echo'<td style="text-align:center;
-            border: 2px solid #000000;
-            border-collapse:collapse;padding: 8px;background-color:#ffffff;color:black;">'.$row['Age']."</td>";
+            border-collapse:collapse;padding: 8px;background-color:#ffffff;color:black;">'.$row['Major']."</td>";
+           
             echo'<td style="text-align:center;
             border: 2px solid #000000;
             border-collapse:collapse;padding: 8px;background-color:#f5f5f5;color:black;">'.$row['Email']."</td>";

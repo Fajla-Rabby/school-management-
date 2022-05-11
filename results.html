@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/all.min.css">
+    <title>Class Schedule</title>
+    <style>
+        body {
+            font-family: "Lato", sans-serif;
+        }
+
+        .sidenav {
+            height: 100%;
+            width: 189px;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #1F2937;
+            overflow-x: hidden;
+            padding-top: 20px;
+            margin-top: 54px;
+        }
+
+        .sidenav a {
+            padding: 6px 8px 6px 10px;
+            text-decoration: none;
+            font-size: 18px;
+            color: #818181;
+            display: block;
+        }
+
+        .sidenav a:hover {
+            color: #f1f1f1;
+        }
+
+        .main {
+            margin-left: 160px;
+            /* Same as the width of the sidenav */
+            font-size: 28px;
+            /* Increased text to enable scrolling */
+            padding: 0px 10px;
+        }
+
+        @media screen and (max-height: 450px) {
+            .sidenav {
+                padding-top: 15px;
+            }
+
+            .sidenav a {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- navbar -->
+    <nav class="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-800 sticky top-0">
+        <div class="container flex flex-wrap justify-between items-center mx-auto">
+            <a href="adminpanel.html" class="flex items-center">
+                <img src="https://www.hbut.edu.cn/images/logo.png" class="mr-3 h-6 sm:h-9" alt="logo">
+                <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">HBUT</span>
+            </a>
+
+            <div class="hidden w-full md:block md:w-auto" id="mobile-menu">
+                <ul class="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
+                    <li>
+                        <p class="text-white "><i class="fa-regular fa-user"></i> Welcome: admin</p>
+                        <!-- <a href="adminpanel.html"
+                            class="block py-2 pr-4 pl-3 text-white bg-blue-700 rounded md:bg-transparent md:p-0 dark:text-white"
+                            aria-current="page">Home</a> -->
+                    </li>
+
+                    <li>
+                        <a href="logout.php" class="text-white">
+                            <i class="fa-solid fa-arrow-right-from-bracket mr-1"></i>Log
+                            Out</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- side navbar -->
+    <div class="sidenav  ">
+        <a href="adminpanel.html">
+            <i class="fa-solid fa-gauge-high mr-1"></i>Dashboard</a>
+        <a href="studentdata.php">
+            <i class="fa-solid fa-users mr-1"></i>Manage Students</a>
+        <a href="addstudent.html">
+            <i class="fa-solid fa-user mr-1"></i>Add Student</a>
+        <br>
+        <p class="text-white pl-3">Time: <br><span class="" id='datetime'></span>.</p>
+    </div>
+
+    <div class="main pl-9">
+        <div>
+            <h1 class="text-3xl m-3 ">
+                <i class="fa-solid fa-square-poll-horizontal"></i>Results
+            </h1>
+        </div>
+
+        <!-- here i will insert a table  -->
+        <div class="text-base h-fit text-center">
+            <table class="border-collapse border border-slate-400 ...">
+                <thead>
+                  <tr>
+                    <th class="border border-slate-300 ...">TASK NUMBER</th>
+                    <th class="border border-slate-300 ...">COURSE TITLE</th>
+                    <th class="border border-slate-300 ...">COURSE TYPE</th>
+                    <th class="border border-slate-300 ...">GPA</th>
+                    <th class="border border-slate-300 ...">CREDIT</th>
+                    <th class="border border-slate-300 ...">NORMAL GRADE(A)</th>
+                    <th class="border border-slate-300 ...">FINAL GRADE(c)</th>
+                    <th class="border border-slate-300 ...">GRADE WEIGHT</th>
+                    <th class="border border-slate-300 ...">OVERALL RESULT</th>
+                    <th class="border border-slate-300 ...">MAKE-UP EXAM REGISTRATION</th>
+                    <th class="border border-slate-300 ...">PUBLICATION OF THE  RESULTS</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="border border-slate-300 ...">201824895</td>
+                    <td class="border border-slate-300 ...">PHYSICS EXPERIMENTI</td>
+                    <td class="border border-slate-300 ...">International Students Class</td>
+                    <td class="border border-slate-300 ...">0.000</td>
+                    <td class="border border-slate-300 ...">2.0</td>
+                    <td class="border border-slate-300 ..."></td>
+                    <td class="border border-slate-300 ...">48</td>
+                    <td class="border border-slate-300 ...">C:100</td>
+                    <td class="border border-slate-300 ...">48</td>
+                    <td class="border border-slate-300 ...">Registration is not allowed</td>
+                    <td class="border border-slate-300 ...">Published</td>
+                  </tr>
+                  <tr>
+                    <td class="border border-slate-300 ...">201824880</td>
+                    <td class="border border-slate-300 ...">Fundamentals of Computer technology and Netword</td>
+                    <td class="border border-slate-300 ...">International Students Class</td>
+                    <td class="border border-slate-300 ...">2.5000</td>
+                    <td class="border border-slate-300 ...">2.5</td>
+                    <td class="border border-slate-300 ...">75</td>
+                    <td class="border border-slate-300 ...">75</td>
+                    <td class="border border-slate-300 ...">AC:30,C:70</td>
+                    <td class="border border-slate-300 ...">75</td>
+                    <td class="border border-slate-300 ...">Registration is not allowed</td>
+                    <td class="border border-slate-300 ...">Published</td>
+                  </tr>
+                  <tr>
+                    <td class="border border-slate-300 ...">201824829</td>
+                    <td class="border border-slate-300 ...">(Pra)Object Oriented Programming</td>
+                    <td class="border border-slate-300 ...">Practice for International Students</td>
+                    <td class="border border-slate-300 ...">3.5000</td>
+                    <td class="border border-slate-300 ...">1.0</td>
+                    <td class="border border-slate-300 ..."></td>
+                    <td class="border border-slate-300 ...">good</td>
+                    <td class="border border-slate-300 ...">C:100</td>
+                    <td class="border border-slate-300 ...">85</td>
+                    <td class="border border-slate-300 ...">Registration is not allowed</td>
+                    <td class="border border-slate-300 ...">Published</td>
+                  </tr>
+                  <tr>
+                    <td class="border border-slate-300 ...">201824828</td>
+                    <td class="border border-slate-300 ...">Object Oriented Programming</td>
+                    <td class="border border-slate-300 ...">International Students Class</td>
+                    <td class="border border-slate-300 ...">2.9000</td>
+                    <td class="border border-slate-300 ...">3.0</td>
+                    <td class="border border-slate-300 ...">66.7</td>
+                    <td class="border border-slate-300 ...">84</td>
+                    <td class="border border-slate-300 ...">A:30,C:70</td>
+                    <td class="border border-slate-300 ...">79</td>
+                    <td class="border border-slate-300 ...">Registration is not allowed</td>
+                    <td class="border border-slate-300 ...">Published</td>
+                  </tr>
+                  <tr>
+                    <td class="border border-slate-300 ...">201824827</td>
+                    <td class="border border-slate-300 ...">Discrete Mathematics</td>
+                    <td class="border border-slate-300 ...">International Students CLass</td>
+                    <td class="border border-slate-300 ...">3.5000</td>
+                    <td class="border border-slate-300 ...">3.0</td>
+                    <td class="border border-slate-300 ...">81</td>
+                    <td class="border border-slate-300 ...">87</td>
+                    <td class="border border-slate-300 ...">A:40,C:60</td>
+                    <td class="border border-slate-300 ...">85</td>
+                    <td class="border border-slate-300 ...">Registration is not allowed</td>
+                    <td class="border border-slate-300 ...">Published</td>
+                  </tr>
+                  <tr>
+                    <td class="border border-slate-300 ...">201824755</td>
+                    <td class="border border-slate-300 ...">Metalworking Practice</td>
+                    <td class="border border-slate-300 ...">International Students CLass</td>
+                    <td class="border border-slate-300 ...">2.7000</td>
+                    <td class="border border-slate-300 ...">2.0</td>
+                    <td class="border border-slate-300 ..."></td>
+                    <td class="border border-slate-300 ...">77</td>
+                    <td class="border border-slate-300 ...">C:100</td>
+                    <td class="border border-slate-300 ...">77</td>
+                    <td class="border border-slate-300 ...">Registration is not allowed</td>
+                    <td class="border border-slate-300 ...">Published</td>
+                  </tr>
+                  <tr>
+                    <td class="border border-slate-300 ...">2018703</td>
+                    <td class="border border-slate-300 ...">ADVANCE MATHEMATICS I</td>
+                    <td class="border border-slate-300 ...">International Students Class</td>
+                    <td class="border border-slate-300 ...">2.2000</td>
+                    <td class="border border-slate-300 ...">5.0</td>
+                    <td class="border border-slate-300 ...">68</td>
+                    <td class="border border-slate-300 ...">73</td>
+                    <td class="border border-slate-300 ...">AC:30,C:70</td>
+                    <td class="border border-slate-300 ...">72</td>
+                    <td class="border border-slate-300 ...">Registration is not allowed</td>
+                    <td class="border border-slate-300 ...">Published</td>
+                  </tr>
+                  <tr>
+                    <td class="border border-slate-300 ...">201824699</td>
+                    <td class="border border-slate-300 ...">COMPREHENSIVE CHINESEII</td>
+                    <td class="border border-slate-300 ...">International Students Class</td>
+                    <td class="border border-slate-300 ...">3.5000</td>
+                    <td class="border border-slate-300 ...">4.0</td>
+                    <td class="border border-slate-300 ...">90</td>
+                    <td class="border border-slate-300 ...">79</td>
+                    <td class="border border-slate-300 ...">A:50,C:50</td>
+                    <td class="border border-slate-300 ...">85</td>
+                    <td class="border border-slate-300 ...">Registration is not allowed</td>
+                    <td class="border border-slate-300 ...">Published</td>
+                  </tr>
+                  <tr>
+                    <td class="border border-slate-300 ...">201824695</td>
+                    <td class="border border-slate-300 ...">Linear Algebra</td>
+                    <td class="border border-slate-300 ...">International Students Class</td>
+                    <td class="border border-slate-300 ...">4.2000</td>
+                    <td class="border border-slate-300 ...">2.5</td>
+                    <td class="border border-slate-300 ...">97</td>
+                    <td class="border border-slate-300 ...">90</td>
+                    <td class="border border-slate-300 ...">A:30,C:70</td>
+                    <td class="border border-slate-300 ...">92</td>
+                    <td class="border border-slate-300 ...">Registration is not allowed</td>
+                    <td class="border border-slate-300 ...">Published</td>
+                  </tr>
+                  <tr>
+                    <td class="border border-slate-300 ...">201824693</td>
+                    <td class="border border-slate-300 ...">ADVANCE MATHEMATICS II</td>
+                    <td class="border border-slate-300 ...">International Students Class</td>
+                    <td class="border border-slate-300 ...">1.7000</td>
+                    <td class="border border-slate-300 ...">5.0</td>
+                    <td class="border border-slate-300 ...">45</td>
+                    <td class="border border-slate-300 ...">81</td>
+                    <td class="border border-slate-300 ...">AC:40,C:60</td>
+                    <td class="border border-slate-300 ...">67</td>
+                    <td class="border border-slate-300 ...">Registration is not allowed</td>
+                    <td class="border border-slate-300 ...">Published</td>
+                  </tr>
+                  <tr>
+                    <td class="border border-slate-300 ...">201824692</td>
+                    <td class="border border-slate-300 ...">General Physics-1</td>
+                    <td class="border border-slate-300 ...">International Students Class</td>
+                    <td class="border border-slate-300 ...">2.1000</td>
+                    <td class="border border-slate-300 ...">3.5</td>
+                    <td class="border border-slate-300 ...">65</td>
+                    <td class="border border-slate-300 ...">74</td>
+                    <td class="border border-slate-300 ...">AC:30,C:70</td>
+                    <td class="border border-slate-300 ...">71</td>
+                    <td class="border border-slate-300 ...">Registration is not allowed</td>
+                    <td class="border border-slate-300 ...">Published</td>
+                  </tr>
+                </tbody>
+              </table>
+        </div>
+
+    </div>
+
+    <script>
+        var dt = new Date();
+        document.getElementById("datetime").innerHTML = dt.toLocaleTimeString(); </script>
+</body>
+
+</html>

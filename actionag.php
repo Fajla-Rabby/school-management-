@@ -8,11 +8,10 @@
             $row=mysqli_fetch_array($query);
             if($row==null)
             {
-                echo '<div style="text-align: center;">';
-                     echo '<p style="width:27%;display:inline-block;font-size:22px;background-color:#C81C07;text-align: center;color: black;margin-top:50px;height:50px; ">Invalid Account</P>';                  
+                echo '<script>alert("Invalid account")</script>';                  
                 echo "</div>";
                 
-                require("signin.html");
+                require("index.html");
             }
             else{
             $email1=$row['Email'];

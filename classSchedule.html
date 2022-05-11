@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="css/all.min.css">
-    <title>Add Student</title>
+    <title>Class Schedule</title>
     <style>
         body {
             font-family: "Lato", sans-serif;
@@ -15,7 +14,7 @@
 
         .sidenav {
             height: 100%;
-            width: 199px;
+            width: 189px;
             position: fixed;
             z-index: 1;
             top: 0;
@@ -27,7 +26,7 @@
         }
 
         .sidenav a {
-            padding: 6px 8px 6px 11px;
+            padding: 6px 8px 6px 10px;
             text-decoration: none;
             font-size: 18px;
             color: #818181;
@@ -57,11 +56,9 @@
         }
     </style>
 </head>
-
 <body>
-
-    <!-- navbar -->
-    <nav class="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-800 sticky top-0">
+     <!-- navbar -->
+     <nav class="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-800 sticky top-0">
         <div class="container flex flex-wrap justify-between items-center mx-auto">
             <a href="adminpanel.html" class="flex items-center">
                 <img src="https://www.hbut.edu.cn/images/logo.png" class="mr-3 h-6 sm:h-9" alt="logo">
@@ -72,10 +69,15 @@
                 <ul class="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
                     <li>
                         <p class="text-white "><i class="fa-regular fa-user"></i> Welcome: admin</p>
+                        <!-- <a href="adminpanel.html"
+                            class="block py-2 pr-4 pl-3 text-white bg-blue-700 rounded md:bg-transparent md:p-0 dark:text-white"
+                            aria-current="page">Home</a> -->
                     </li>
+
                     <li>
                         <a href="logout.php" class="text-white">
-                            <i class="fa-solid fa-arrow-right-from-bracket mr-1"></i>Log Out</a>
+                            <i class="fa-solid fa-arrow-right-from-bracket mr-1"></i>Log
+                            Out</a>
                     </li>
                 </ul>
             </div>
@@ -94,51 +96,24 @@
         <p class="text-white pl-3">Time: <br><span class="" id='datetime'></span>.</p>
     </div>
 
-    <main class="main pl-9">
-
+    <div class="main pl-9">
         <div>
-            <h1 class="text-3xl m-3 pl-29 ">
-                <i class="fa-solid fa-user mr-1"></i>Add Student
+            <h1 class="text-3xl m-3 ">
+                <i class="fa-solid fa-hourglass"></i>Class Schdule
             </h1>
         </div>
         <div class="m-5 text-center">
-            <h1 class=" font-bold text-5xl bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-violet-500">
-                Student Information Management System</h1>
+            <h1 class=" font-bold text-5xl bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-violet-500">Student Information Management System</h1>
         </div>
 
-        <div class=" bg-blue-400 bg-rounded  text-center h-max w-auto">
-            <form method="post" action="add.php">
-                <p>Student ID: </p>
-                <input class="p-2 rounded-2xl mb-4 px-2 w-3/2" type="text" name="ID" />
-                <p>First Name:</p>
-                <input class="p-2 rounded-2xl mb-4 px-2 w-3/2" type="text" name="Fname" />
-                <p>Last Name:</p>
-                <input class="p-2 rounded-2xl mb-4 px-2 w-3/2" type="text" name="Lname" />
-                <p>Gender:</p>
-                <select class="p-2 rounded-2xl mb-4 px-2 w-3/2" name="Gender">
-                    <option value="Male">Male</option>
-                    <option value="Female">Female</option>
-                </select>
-                <p>Major</p>
-                <select class="p-2 rounded-2xl mb-4 px-2 w-3/2" name="Major">
-                    <option value="CSE">CSE</option>
-                    <option value="EEE">EEE</option>
-                    <option value="CSIT">CSIT</option>
-                </select>
-                <!-- <p>Date of Birth:</p>
-                <input class="p-2 rounded-2xl mb-4 px-2 w-3/2" type="date" name="Birthday" />
-                <p>Age:</p>
-                <input class="p-2 rounded-2xl mb-4 px-2 w-3/2" type="text" name="Age" /> -->
-                <p>E-mail:</p>
-                <input class="p-2 rounded-2xl mb-4 px-2 w-3/2" type="email" name="Email" /><br /><br />
-                <input class="bg-white hover:bg-slate-300 p-2 rounded mb-4" type="submit" value="Save Student" name="Submit" />
-            </form>
+        <div>
+            <img src="" alt="">
         </div>
-    </main>
+
+    </div>
 
     <script>
         var dt = new Date();
         document.getElementById("datetime").innerHTML = dt.toLocaleTimeString(); </script>
 </body>
-
 </html>
