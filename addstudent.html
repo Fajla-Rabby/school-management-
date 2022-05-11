@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/all.min.css">
+    <title>Add Student</title>
+    <style>
+        body {
+            font-family: "Lato", sans-serif;
+        }
+
+        .sidenav {
+            height: 100%;
+            width: 199px;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #1F2937;
+            overflow-x: hidden;
+            padding-top: 20px;
+            margin-top: 54px;
+        }
+
+        .sidenav a {
+            padding: 6px 8px 6px 11px;
+            text-decoration: none;
+            font-size: 18px;
+            color: #818181;
+            display: block;
+        }
+
+        .sidenav a:hover {
+            color: #f1f1f1;
+        }
+
+        .main {
+            margin-left: 160px;
+            /* Same as the width of the sidenav */
+            font-size: 28px;
+            /* Increased text to enable scrolling */
+            padding: 0px 10px;
+        }
+
+        @media screen and (max-height: 450px) {
+            .sidenav {
+                padding-top: 15px;
+            }
+
+            .sidenav a {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- navbar -->
+    <nav class="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-800 sticky top-0">
+        <div class="container flex flex-wrap justify-between items-center mx-auto">
+            <a href="adminpanel.html" class="flex items-center">
+                <img src="https://www.hbut.edu.cn/images/logo.png" class="mr-3 h-6 sm:h-9" alt="logo">
+                <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">HBUT-SIMS</span>
+            </a>
+
+            <div class="hidden w-full md:block md:w-auto" id="mobile-menu">
+                <ul class="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
+                    <li>
+                        <p class="text-white "><i class="fa-regular fa-user"></i> Welcome: admin</p>
+                    </li>
+                    <li>
+                        <a href="logout.php" class="text-white">
+                            <i class="fa-solid fa-arrow-right-from-bracket mr-1"></i>Log Out</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- side navbar -->
+    <div class="sidenav  ">
+        <a href="adminpanel.html">
+            <i class="fa-solid fa-gauge-high mr-1"></i>Dashboard</a>
+        <a href="studentdata.php">
+            <i class="fa-solid fa-users mr-1"></i>Manage Students</a>
+        <a href="addstudent.html">
+            <i class="fa-solid fa-user mr-1"></i>Add Student</a>
+        <br>
+        <p class="text-white pl-3">Time: <br><span class="" id='datetime'></span>.</p>
+    </div>
+
+    <main class="main pl-9">
+
+        <div>
+            <h1 class="text-3xl m-3 pl-29 ">
+                <i class="fa-solid fa-user mr-1"></i>Add Student
+            </h1>
+        </div>
+        <div class="m-5 text-center">
+            <h1 class=" font-bold text-5xl bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-violet-500">
+                Student Information Management System</h1>
+        </div>
+
+        <div class=" bg-blue-400 bg-rounded  text-center h-max w-auto">
+            <form method="post" action="add.php">
+                <p>Student ID: </p>
+                <input class="p-2 rounded-2xl mb-4 px-2 w-3/2" type="text" name="ID" />
+                <p>First Name:</p>
+                <input class="p-2 rounded-2xl mb-4 px-2 w-3/2" type="text" name="Fname" />
+                <p>Last Name:</p>
+                <input class="p-2 rounded-2xl mb-4 px-2 w-3/2" type="text" name="Lname" />
+                <p>Gender:</p>
+                <select class="p-2 rounded-2xl mb-4 px-2 w-3/2" name="Gender">
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select>
+                <p>Date of Birth:</p>
+                <input class="p-2 rounded-2xl mb-4 px-2 w-3/2" type="date" name="Birthday" />
+                <p>Age:</p>
+                <input class="p-2 rounded-2xl mb-4 px-2 w-3/2" type="text" name="Age" />
+                <p>E-mail:</p>
+                <input class="p-2 rounded-2xl mb-4 px-2 w-3/2" type="email" name="Email" /><br /><br />
+                <input class="bg-white hover:bg-slate-300 p-2 rounded mb-4" type="submit" value="Save Student" name="Submit" />
+            </form>
+        </div>
+    </main>
+
+    <script>
+        var dt = new Date();
+        document.getElementById("datetime").innerHTML = dt.toLocaleTimeString(); </script>
+</body>
+
+</html>
