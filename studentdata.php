@@ -111,10 +111,12 @@
             <p style="color: #2563EB; text-align: center; font-size: 30px;font-family: 'Times New Roman', Times, serif;margin-top: 5px;margin-bottom:2px;">
                18lq Student's Data
             </p>
+            <!-- student data table creating dynamically as per the student input  -->
         
         <?php
+        <!--  connect to database  -->
         $DB_Connect= mysqli_connect("localhost","root","","addstudent");
-       
+       <!-- sql query for select the student table -->
         $query=mysqli_query($DB_Connect,"SELECT *FROM student ");
         echo'<table align="center" style="border: 2px solid black;
         border-collapse:collapse;">';
@@ -164,7 +166,7 @@
             border-collapse:collapse;padding: 8px;background-color:#f5f5f5;color:black;">'.$row['Email']."</td>";
         }
         echo "</table>";
-       
+       <!-- db connect close  -->
         mysqli_close($DB_Connect);
     ?>
     </main>
