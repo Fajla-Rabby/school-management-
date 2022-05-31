@@ -109,7 +109,7 @@
                 <i class="fa-solid fa-users mr-1"></i>Manage Students
             </h1>
             <p style="color: #2563EB; text-align: center; font-size: 30px;font-family: 'Times New Roman', Times, serif;margin-top: 5px;margin-bottom:2px;">
-                Student's Data
+               18lq Student's Data
             </p>
         
         <?php
@@ -142,7 +142,6 @@
         echo "</tr>";
         while($row=mysqli_fetch_array($query))
         {
-            echo "<br>";
             echo"<tr>";
             echo'<td style="text-align:center;
             border: 2px solid #000000;
