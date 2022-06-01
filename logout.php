@@ -1,6 +1,9 @@
-<!-- season destroy php code  -->
 <?php
- session_start();
- session_destroy();
- require("index.html");
+    //season start while login
+    session_start();
+
+    //season destroy while logout
+    session_destroy();
+
+    require("index.html");
 ?>

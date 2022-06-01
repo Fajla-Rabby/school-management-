@@ -114,9 +114,11 @@
             <!-- student data table creating dynamically as per the student input  -->
         
         <?php
-        <!--  connect to database  -->
+
+        //  connect to database  
         $DB_Connect= mysqli_connect("localhost","root","","addstudent");
-       <!-- sql query for select the student table -->
+
+       // sql query for select the student table 
         $query=mysqli_query($DB_Connect,"SELECT *FROM student ");
         echo'<table align="center" style="border: 2px solid black;
         border-collapse:collapse;">';
@@ -166,12 +168,12 @@
             border-collapse:collapse;padding: 8px;background-color:#f5f5f5;color:black;">'.$row['Email']."</td>";
         }
         echo "</table>";
-       <!-- db connect close  -->
+       // db connect close  
         mysqli_close($DB_Connect);
     ?>
     </main>
 
-
+    <!-- time showing  -->
     <script>
         var dt = new Date();
         document.getElementById("datetime").innerHTML = dt.toLocaleTimeString(); </script>
